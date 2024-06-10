@@ -1,0 +1,421 @@
+$text-color-dark: #0F455A;
+$text-color-light: #fff;
+
+.montez-regular {
+    font-family: "Montez", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+section{
+    max-width: 1080px;
+    min-height: 80vh;
+    scroll-snap-align: start;
+    padding: 100px;
+}
+body{
+    box-sizing: border-box;
+    color: $text-color-dark;
+}
+a{
+    text-decoration: none;
+    color: $text-color-dark;
+}
+.flex{
+    display: flex;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    a {
+        padding: 10px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        &:hover{
+            color: #f1f1f1;
+        }
+    }
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+}
+
+
+nav{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: $text-color-dark;
+    .navbar{
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 80px;
+        padding: 20px;
+
+        .logo{
+            a{
+                color: $text-color-light;
+                font-size: 2.6vw;
+            }
+        }
+        .menu{
+            a{
+                padding: 0px 15px;
+                color: $text-color-light;
+            }
+            h3{
+                display: none;
+            }
+    
+        }
+    }
+}
+#bio{
+    background-image: url('./img/Joy\ ogbitse.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    // // background-attachment: fixed;
+    // background-clip: inherit;
+    // width: 100%;
+    // z-index: 8;
+    text-align: center;
+    #name{
+        font-size: 7vw;
+        padding: 10px;
+        margin-top: 1.6em;
+    }
+    h5{
+        font-size: 1.4em;
+        font-weight: lighter;
+    }
+    p{
+        padding-top: 20px;
+    }
+    .scroll{
+        margin-top: 4em;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+}
+#welcome{
+    h1{
+        margin: 4em 0px 2em 0px;
+        font-size: 2.2em;
+    }
+    h3{
+        font-size: 30px;
+    }
+    p{
+        font-size: 18px;
+        margin: 10px 0px 20px 0px;
+    }
+    #about-btn{
+        border: none;
+        margin : 10px 15px 0px 0px;
+        padding: 8px 20px;
+        color: $text-color-light;
+        background: $text-color-dark;
+        font-weight: bold;
+        a{
+            color: $text-color-light;
+        }
+    }
+    #book-btn{
+        border: 1px solid $text-color-dark;
+        background: $text-color-light;
+        margin : 10px 15px 0px 0px;
+        padding: 8px 20px;
+
+    }
+}
+
+.about-me{
+    margin-top: 100px;
+
+    h1{
+        font-size: 3rem;
+        margin: 40px 0px;
+    }
+    p{
+        line-height: 2;
+    }
+    .words{
+
+        img{
+            z-index: -10;
+            width: 30vw;
+            padding:  0px 20px 0px 0px ;
+            float: left;
+        }
+    }
+    .download-btn{
+        border: none;
+        background: $text-color-dark;
+        color: $text-color-light;
+        padding: 10px 20px;
+        margin-top: 2rem;
+        a{
+            color: $text-color-light;
+        }
+    }
+    .follow{
+        margin-top: 50px;
+    }
+    .social-links{
+        // flex-direction: column;
+        // justify-content: space-evenly;
+        justify-content: flex-start;
+        align-items: center;
+
+        a img{
+            width: 20px;
+            padding: 20px 4rem 0px 0px;
+            &:hover{
+                width: 25px;
+            }
+        }.facebook{
+            width: 12px;
+            &:hover{
+                width: 17px;
+            }
+        }
+    }
+}
+.books{
+    margin-bottom: 40px;
+    h1{
+        font-size: 3rem;
+        margin: 40px 0px;
+        
+    }
+    .book-title{
+        padding: 10px 0px;
+        font-size: 18px;
+    }
+    .book{
+
+        p{
+            line-height: 2.5;
+            span{
+                font-weight: bold;
+                font-size: 20px;
+            }
+            img{
+                width: 40vw;
+                padding:  0px 20px 0px 0px ;
+                float: left;
+            }
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.posts{
+    h1{
+        font-size: 4vw;
+        margin: 40px 0px;
+    }
+    div{
+        margin: 20px 0px;
+        h3{
+            font-size: 24px;
+            margin: 10px 0px;
+        }
+        a{
+            text-decoration: underline;
+            p{
+                line-height: 2.4;
+            }
+        }
+    }
+}
+.copyright{
+    text-align: center;
+    margin-top: -50px;
+}
+//mobile view
+@media screen and (max-width: 500px) {
+    section{
+        padding: 20px;
+    }
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      cursor: pointer;
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    .social-links{
+        margin-top: 200px;
+        // flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a img{
+            width: 20px;
+            padding: 10px;
+            &:hover{
+                width: 25px;
+            }
+        }.facebook{
+            width: 12px;
+            &:hover{
+                width: 17px;
+            }
+        }
+    }
+    nav{
+        .navbar{
+            margin: 0px 0px;
+            padding: 20px;
+            .logo{
+                a{
+                    font-size: 25px;
+                }
+            }
+            .menu{
+                a{
+                    display: none;
+                }
+                h3{
+                    display: block;
+                    cursor: pointer;
+                }
+        
+            }
+        }
+    }
+    #bio{
+        text-align: left;
+        #name{
+            font-size: 10vw;
+            padding: 10px 0px;
+            margin-top: 3em;
+        }
+        p{
+            padding-top: 20px;
+            line-height: 1.7;
+        }
+    }
+    .follow{
+        margin-top: 50px;
+    }
+    .about-me{
+        margin-top: 0px;
+    
+        h1{
+            font-size: 3rem;
+            margin: 10vh 0px 6vh;
+        }
+        .words{
+    
+            img{
+                width: 50vw;
+            }
+        }
+        .social-links{
+            justify-content: flex-start;
+            align-items: center;
+
+            margin-top: 10px;
+        }
+    }
+    .books{
+        margin-bottom: 0px;
+        h1{
+            margin: 80px 0px -40px;
+            
+        }
+        .book-title{
+            margin-top: 4.5rem;
+            font-weight: bold;
+        }
+        .book{
+            p{
+                span{
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                img{
+                    width: 50vw;
+                }
+            }
+        }
+    }
+    .posts{
+        h1{
+            font-size: 2.8em;
+            margin: 80px 0px 40px;
+        }
+        div{
+            margin: 40px 0px;
+            h3{
+                font-size: 24px;
+                margin: 10px 0px;
+            }
+            p{
+                line-height: 2.4;
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+}
+
+//tablet view
+@media screen and (min-width: 501px) and (max-width: 750px) {
+    nav{
+        .navbar{
+            margin: 0px 20px;
+    
+            .logo{
+                a{
+                    font-size: 3.5vw;
+                }
+            }
+            .menu{
+                a{
+                    padding: 0px 5px;
+                }
+            }
+        }
+    }
+}
